@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details.
- *
+ nt*
  * dynamic window manager is designed like any other X client as well. It is
  * driven through handling X events. In contrast to other X clients, a window
  * manager selects for SubstructureRedirectMask on the root window, to receive
