@@ -1,3 +1,4 @@
+/* Search NEWBUILD for new installation */
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
@@ -27,7 +28,8 @@ static const int smartgaps_fact          = 1;   /* gap factor when there is only
 #if AUTOSTART_PATCH
 static const char autostartblocksh[]     = "autostart_blocking.sh";
 static const char autostartsh[]          = "autostart.sh";
-static const char dwmdir[]               = ".dwm";
+// NEWBUILD: change path accordingly 
+static const char dwmdir[]               = "workspace/dwm-flexipatch/.dwm";
 static const char localshare[]           = "";
 #endif // AUTOSTART_PATCH
 #if BAR_ANYBAR_PATCH
