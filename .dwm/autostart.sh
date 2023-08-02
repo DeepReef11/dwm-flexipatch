@@ -39,6 +39,7 @@ else
   st -e tmux new & 
   nextcloud --background &
 	#eval "${screen[$(( $RANDOM % ${#screen[@]} ))]} && (eval $launcher ) "
+  #eval "$launcher"
 fi
 
 

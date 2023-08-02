@@ -29,7 +29,7 @@ static const int smartgaps_fact          = 1;   /* gap factor when there is only
 static const char autostartblocksh[]     = "autostart_blocking.sh";
 static const char autostartsh[]          = "autostart.sh";
 // NEWBUILD: change path accordingly 
-static const char dwmdir[]               = "workspace/dwm-flexipatch/.dwm";
+static const char dwmdir[]               = ".dwm";
 static const char localshare[]           = "";
 #endif // AUTOSTART_PATCH
 #if BAR_ANYBAR_PATCH
