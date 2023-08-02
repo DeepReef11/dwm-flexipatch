@@ -22,6 +22,8 @@ screen=(
 "st -e tmux new 'curl -H \"Accept-Language: fr\" wttr.in/$(sh ~/.location.sh) && read ' "
 #6
 "st -e tmux new 'cbonsai --live && read ' "
+#7
+"st -e tmux new 'cava && read ' "
 )
 
 if [[ "$debug" !=  -1 ]];
@@ -34,7 +36,9 @@ then
 	notify-send "Screen" "${screen[$debug]}" -t 5000 &
 	eval "${screen[$debug]} && (eval $launcher ) "
 else
-
-	eval "${screen[$(( $RANDOM % ${#screen[@]} ))]} && (eval $launcher ) "
+  st -e tmux new & 
+  nextcloud --background &
+	#eval "${screen[$(( $RANDOM % ${#screen[@]} ))]} && (eval $launcher ) "
 fi
+
 
