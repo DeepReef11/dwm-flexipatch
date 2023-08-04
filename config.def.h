@@ -904,6 +904,17 @@ static const Key on_empty_keys[] = {
 
 static const Key keys[] = {
 	/* modifier                     key            function                argument */
+	// CUSTOM KEYS
+	{ MODKEY,                       XK_Left,      focusmon,               {.i = -1 } },
+	{ MODKEY,                       XK_Right,     focusmon,               {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_Left,      tagmon,                 {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_Right,     tagmon,                 {.i = +1 } },
+	{ MODKEY,                       XK_Up,          focusstack,             {.i = +1 } },
+	{ MODKEY,                       XK_Down,          focusstack,             {.i = -1 } },
+	#if PUSH_PATCH || PUSH_NO_MASTER_PATCH // CUSTOM KEYS
+	{ MODKEY|ShiftMask,           XK_Up,          pushdown,               {0} },
+	{ MODKEY|ShiftMask,           XK_Down,          pushup,                 {0} },
+	#endif // PUSH_PATCH / PUSH_NO_MASTER_PATCH CUSTOM KEYS
 	#if KEYMODES_PATCH
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
 	#endif // KEYMODES_PATCH
