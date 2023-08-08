@@ -718,6 +718,9 @@ static const Layout layouts[] = {
 #else
 static const Layout layouts[] = {
 	/* symbol     arrange function */
+	#if COLUMNS_LAYOUT
+	{ "|||",      col },
+	#endif
 	#if TILE_LAYOUT
 	{ "[]=",      tile },    /* first entry is default */
 	#endif
@@ -736,9 +739,6 @@ static const Layout layouts[] = {
 	#endif
 	#if CENTEREDFLOATINGMASTER_LAYOUT
 	{ ">M>",      centeredfloatingmaster },
-	#endif
-	#if COLUMNS_LAYOUT
-	{ "|||",      col },
 	#endif
 	#if DECK_LAYOUT
 	{ "[D]",      deck },
