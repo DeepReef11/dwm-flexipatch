@@ -724,10 +724,10 @@ static const Layout layouts[] = {
 	#if TILE_LAYOUT
 	{ "[]=",      tile },    /* first entry is default */
 	#endif
-	{ "><>",      NULL },    /* no layout function means floating behavior */
 	#if MONOCLE_LAYOUT
 	{ "[M]",      monocle },
 	#endif
+	{ "><>",      NULL },    /* no layout function means floating behavior */
 	#if BSTACK_LAYOUT
 	{ "TTT",      bstack },
 	#endif
