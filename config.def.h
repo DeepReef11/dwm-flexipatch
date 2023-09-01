@@ -500,6 +500,7 @@ static const Rule rules[] = {
 	RULE(.class = "Firefox", .tags = 1 << 7)
 	RULE(.class = "st", .isterminal = 1)
 	RULE(.class = "tmux", .isterminal = 1)
+	RULE(.class = "kitty", .isterminal = 1)
 	#if RENAMED_SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .scratchkey = 's', .isfloating = 1)
 	#elif SCRATCHPADS_PATCH
