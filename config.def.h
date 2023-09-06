@@ -1081,6 +1081,7 @@ static const Key keys[] = {
 	{ 0,                            HOLDKEY,       holdbar,                {0} },
 	#endif // BAR_HOLDBAR_PATCH
 	#if WINVIEW_PATCH
+	// press mod 0, select window (mod j/k) then press mod o to get to that window within its tag.
 	{ MODKEY,                       XK_o,          winview,                {0} },
 	#endif // WINVIEW_PATCH
 	#if XRDB_PATCH && !BAR_VTCOLORS_PATCH
@@ -1092,7 +1093,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_f,          setlayout,              {.v = &layouts[3]} },
 	{ MODKEY,                       XK_m,          setlayout,              {.v = &layouts[2]} },
 	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} },
-	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[4]} },
+	/* { MODKEY,                       XK_o,      setlayout,      {.v = &layouts[4]} }, */
 
 	#if COLUMNS_LAYOUT
 	/* { MODKEY,                       XK_c,          setlayout,              {.v = &layouts[3]} }, */
@@ -1302,6 +1303,8 @@ static const Key keys[] = {
 	#if CYCLELAYOUTS_PATCH
 	{ MODKEY|ControlMask,           XK_comma,      cyclelayout,            {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_period,     cyclelayout,            {.i = +1 } },
+	{ MODKEY|ControlMask,           XK_Left,      cyclelayout,            {.i = -1 } },
+	{ MODKEY|ControlMask,           XK_Right,     cyclelayout,            {.i = +1 } },
 	#endif // CYCLELAYOUTS_PATCH
 	#if MPDCONTROL_PATCH
 	{ MODKEY,                       XK_F1,         mpdchange,              {.i = -1} },
