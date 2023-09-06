@@ -159,7 +159,7 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 static const char font[]                 = "monospace 10";
 #else
 //static const char *fonts[]               = { "Unifont:size=14"};
-static const char *fonts[]               = { "FiraCode Nerd Font:style:med:size=12", "JetBrainsMono Nerd Font:style:medium:size:11", "Material Design Icons Desktop:size=11"};
+static const char *fonts[]               = { "FiraCode Nerd Font:style:med:size=12", "JetBrainsMono Nerd Font:style:medium:size:11", "Symbols Nerd Font Mono:size=11"};
 #endif // BAR_PANGO_PATCH
 static const char dmenufont[]            = "monospace:size=10";
 
@@ -448,7 +448,7 @@ static char tagicons[][NUMTAGS][MAX_TAGLEN] =
 static char *tagicons[][NUMTAGS] =
 #endif // NAMETAG_PATCH
 {
-	[DEFAULT_TAGS]        = { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
+	[DEFAULT_TAGS]        = { "󰘧", "2", "3", "4", "5", "6", "7", "8", "9" },
 	[ALTERNATIVE_TAGS]    = { "A", "B", "C", "D", "E", "F", "G", "H", "I" },
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };
