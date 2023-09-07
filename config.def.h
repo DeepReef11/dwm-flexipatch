@@ -159,7 +159,7 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 static const char font[]                 = "monospace 10";
 #else
 //static const char *fonts[]               = { "Unifont:size=14"};
-static const char *fonts[]               = { "FiraCode Nerd Font:style:med:size=12", "JetBrainsMono Nerd Font:style:medium:size:11", "Symbols Nerd Font Mono:size=11"};
+static const char *fonts[]               = { "FiraCode Nerd Font:style:bold:size=14", "JetBrainsMono Nerd Font:style:medium:size:14", "Symbols Nerd Font Mono:size=16"};
 #endif // BAR_PANGO_PATCH
 static const char dmenufont[]            = "monospace:size=10";
 
@@ -191,6 +191,8 @@ static char tagsnormfgcolor[]            = "#bbbbbb";
 static char tagsnormbgcolor[]            = "#222222";
 static char tagsnormbordercolor[]        = "#444444";
 static char tagsnormfloatcolor[]         = "#db8fd9";
+static char tagspurpledark[]             = "#660066";
+static char tagspurple[]                 = "#990099";
 
 static char tagsselfgcolor[]             = "#000000";
 static char tagsselbgcolor[]             = "#ffa31a";
@@ -327,6 +329,9 @@ static const int color_ptrs[][ColCount] = {
 };
 #endif // BAR_VTCOLORS_PATCH
 
+
+
+
 static char *colors[][ColCount] = {
 	/*                       fg                bg                border                float */
 	[SchemeNorm]         = { normfgcolor,      normbgcolor,      normbordercolor,      normfloatcolor },
@@ -334,12 +339,18 @@ static char *colors[][ColCount] = {
 	[SchemeTitleNorm]    = { titlenormfgcolor, titlenormbgcolor, titlenormbordercolor, titlenormfloatcolor },
 	[SchemeTitleSel]     = { titleselfgcolor,  titleselbgcolor,  titleselbordercolor,  titleselfloatcolor },
 	[SchemeTagsNorm]     = { tagsnormfgcolor,  tagsnormbgcolor,  tagsnormbordercolor,  tagsnormfloatcolor },
-	[SchemeTagsSel]      = { tagsselfgcolor,   tagsselbgcolor,   tagsselbordercolor,   tagsselfloatcolor },
-
-	#if BAR_POWERLINE_TAGS_PATCH
-	[SchemeTags1]     = { tagsnormfgcolor,  tagsnormbgcolor,  tagsnormbordercolor,  tagsnormfloatcolor },
-	[SchemeTags2]      = { tagsselfgcolor,   tagsselbgcolor,   tagsselbordercolor,   tagsselfloatcolor },
-	#endif
+	[SchemeTagsSel]      = { titleselfgcolor,   "#ffffcc",   tagsselbordercolor,   tagsselfloatcolor },
+#if BAR_POWERLINE_TAGS_PATCH
+	[SchemeTags1]     = { "#ffffff",  tagspurple,  tagsnormbordercolor,  tagsnormfloatcolor },
+	[SchemeTags2]     = { "#ffffff",   tagspurpledark,   tagsselbordercolor,   tagsselfloatcolor },
+	[SchemeTags3]     = { "#ffffff",  tagspurple,  tagsnormbordercolor,  tagsnormfloatcolor },
+	[SchemeTags4]     = { "#ffffff",   tagspurpledark,   tagsselbordercolor,   tagsselfloatcolor },
+	[SchemeTags5]     = { "#ffffff",  tagspurple,  tagsnormbordercolor,  tagsnormfloatcolor },
+	[SchemeTags6]     = { "#ffffff",   tagspurpledark,   tagsselbordercolor,   tagsselfloatcolor },
+	[SchemeTags7]     = { "#ffffff",  tagspurple,  tagsnormbordercolor,  tagsnormfloatcolor },
+	[SchemeTags8]     = { "#ffffff",   tagspurpledark,   tagsselbordercolor,   tagsselfloatcolor },
+	[SchemeTags9]     = { "#ffffff",  tagspurple,  tagsnormbordercolor,  tagsnormfloatcolor },
+#endif
 	[SchemeHidNorm]      = { hidnormfgcolor,   hidnormbgcolor,   c000000,              c000000 },
 	[SchemeHidSel]       = { hidselfgcolor,    hidselbgcolor,    c000000,              c000000 },
 	[SchemeUrg]          = { urgfgcolor,       urgbgcolor,       urgbordercolor,       urgfloatcolor },
@@ -453,7 +464,7 @@ static char tagicons[][NUMTAGS][MAX_TAGLEN] =
 static char *tagicons[][NUMTAGS] =
 #endif // NAMETAG_PATCH
 {
-	[DEFAULT_TAGS]        = { "󰘧", "2", "3", "4", "5", "6", "7", "8", "9" },
+	[DEFAULT_TAGS]        = { "", "", "󰍧", "󱉺", "5", "6", "7", "8", "" },
 	[ALTERNATIVE_TAGS]    = { "A", "B", "C", "D", "E", "F", "G", "H", "I" },
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };

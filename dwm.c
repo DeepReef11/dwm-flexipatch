@@ -148,6 +148,13 @@ enum {
 	#if BAR_POWERLINE_TAGS_PATCH
 	SchemeTags1,
 	SchemeTags2,
+	SchemeTags3,
+	SchemeTags4,
+	SchemeTags5,
+	SchemeTags6,
+	SchemeTags7,
+	SchemeTags8,
+	SchemeTags9,
 	#endif
 	SchemeHidNorm,
 	SchemeHidSel,
