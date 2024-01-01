@@ -937,6 +937,7 @@ static const Key keys[] = {
 	#endif // KEYMODES_PATCH
 	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_w,          spawn,                  {.v = termcmd } },
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },
